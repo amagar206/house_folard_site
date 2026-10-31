@@ -12,7 +12,7 @@ export default function Contact() {
         <div className="space-y-6 text-left">
           <div className="flex flex-col items-center border-b border-gray-100 pb-6">
             <span className="text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">Direction</span>
-            <span className="text-xl font-serif text-[#1A1A1A]">Mohamed Bolbaroud</span>
+            
           </div>
 
           <div className="flex flex-col items-center border-b border-gray-100 pb-6">
