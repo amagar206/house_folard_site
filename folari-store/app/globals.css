@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@keyframes shine {
+  100% { transform: translateX(100%); }
+}
+
+:root {
+  --universe-bg: #030014;
+}
+
+body {
+  background-color: var(--universe-bg);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* 4D Animated Nebula Background */
+.universe-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: radial-gradient(circle at 15% 50%, rgba(76, 29, 149, 0.25), transparent 50%), 
+              radial-gradient(circle at 85% 30%, rgba(14, 116, 144, 0.25), transparent 50%),
+              url('[https://www.transparenttextures.com/patterns/stardust.png](https://www.transparenttextures.com/patterns/stardust.png)');
+  animation: shift 20s infinite alternate linear;
+}
+
+@keyframes shift {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+
+
+
+
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+
+
+
+}

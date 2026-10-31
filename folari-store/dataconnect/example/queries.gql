@@ -1,0 +1,7 @@
+query GetProducts @auth(level: PUBLIC, insecureReason: "Anyone can view products") {
+  products {
+    id
+    name
+    priceDHS
+  }
+}

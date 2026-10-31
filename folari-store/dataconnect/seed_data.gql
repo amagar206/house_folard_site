@@ -1,0 +1,24 @@
+mutation SeedAllTables @transaction @auth(expr: "auth.token.admin == true") {
+  category_insertMany(data: [
+    { id: "00000000-0000-0000-0000-000000000001", name: "Electronics" },
+    { id: "00000000-0000-0000-0000-000000000002", name: "Home Appliances" },
+    { id: "00000000-0000-0000-0000-000000000003", name: "Office Supplies" }
+  ])
+  product_insertMany(data: [
+    { name: "Smartphone", colorVariant: "Black", priceDHS: 2999.99, imageUrl: "url1", isActive: true, categoryId: "00000000-0000-0000-0000-000000000001" },
+    { name: "Laptop", colorVariant: "Silver", priceDHS: 5499.00, imageUrl: "url2", isActive: true, categoryId: "00000000-0000-0000-0000-000000000001" },
+    { name: "Blender", colorVariant: "White", priceDHS: 399.50, imageUrl: "url3", isActive: true, categoryId: "00000000-0000-0000-0000-000000000002" },
+    { name: "Desk Chair", colorVariant: "Grey", priceDHS: 850.00, imageUrl: "url4", isActive: false, categoryId: "00000000-0000-0000-0000-000000000003" }
+  ])
+  promotion_insertMany(data: [
+    { bannerText: "Summer Sale 20%", isActive: true },
+    { bannerText: "Back to School Special", isActive: true },
+    { bannerText: "Clearance Event", isActive: false }
+  ])
+  storeConfig_insertMany(data: [
+    { whatsappNumber: "+1234567890", storeTitle: "Tech Haven", themeAccentColor: "#FF5733", metaDescription: "Best tech store" }
+  ])
+  adminSettings_insertMany(data: [
+    { hashedPin: "$2b$12$eXexampleHashedPin12345" }
+  ])
+}

@@ -1,0 +1,32 @@
+type Category @table {
+  name: String!
+}
+
+type Product @table {
+  name: String!
+  colorVariant: String!
+  priceDHS: Float!
+  imageUrl: String!
+  isActive: Boolean!
+  description: String
+  stockQuantity: Int
+  category: Category
+}
+
+type Promotion @table {
+  bannerText: String!
+  isActive: Boolean!
+  startDate: Timestamp
+  endDate: Timestamp
+}
+
+type AdminSettings @table {
+  hashedPin: String!
+}
+
+type StoreConfig @table {
+  whatsappNumber: String!
+  storeTitle: String!
+  themeAccentColor: String
+  metaDescription: String
+}
